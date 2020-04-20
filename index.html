@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Parth Gupta">
+  <meta name="description" content="A free online website to view any country's flag, capital, currencies, languages etc.">
+  <meta name="keywords" content="Atlas, country, countries, Capital, Region, World, Flags, Maps">
+
+  <title>World Mania</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,800&display=swap" rel="stylesheet">
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="disp()">
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-7" style="margin: auto; padding-top: 0.8%;">
+          <h2>Where in the world?</h2>
+        </div>
+        <div class="col-5" style="text-align: right; padding-right: 5%; margin: auto;">
+          <a href="#" class="dark" onclick="checkDarkMode()"><i class="fas fa-moon"></i>&nbsp;Dark Mode</a>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </header>
+
+  <nav class="container">
+    <div class="row homeNav">
+      <div class="col-lg-9">
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-search" onclick="search()"></i></span>
+          </div>
+          <input type="search" class="form-control search" placeholder="Search for a country..." onsearch="search()">
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <select name="Filter By Region..." class="form-control regions" onclick="regionFilter()">
+          <option value="all">Filter By Region...</option>
+          <option value="Africa">Africa</option>
+          <option value="Americas">Americas</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+          <option value="Polar">Polar</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+
+  <div class="errorDiv">
+
+  </div>
+
+  <div class="container extraPadding">
+    <div class="major">
+
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 output">
+
+    </div>
+  </div>
+
+  <div class="mobileButton">
+    <button type="button" name="button" class="btn btn-lg load">Load More</button>
+  </div>
+
+  <!-- JQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="index.js" charset="utf-8"></script>
+<!-- window.location.reload() -->
+
+</body>
+
+</html>
